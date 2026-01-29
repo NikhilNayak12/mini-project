@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Store</title>
-    <style>
-        .card{
-            border: 2px solid black;
-
-            padding: 10px;
-            width: 250px;
-        }
-        .card img{
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .box{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Product Store</h1>
-    <input type="text"  placeholder="Search Your Product Here">
-    <button>Search</button>
+    <input type="text" placeholder="Search Your Product Here" id="searchInput">
+    <button id="searchBtn">Search</button>
     <div class="box">
     </div>
-    <script>
-        let box = document.querySelector('.box');
-        fetch('https://dummyjson.com/products')
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-            data.products.forEach(product => {
-                let card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <img src="${product.thumbnail}" alt="${product.title}">
-                    <h3>${product.title}</h3>
-                    <p>$${product.price}</p>
-                `;
-                box.appendChild(card);
-            });
-        })
-        .catch(err=>console.log(err));
-    </script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
