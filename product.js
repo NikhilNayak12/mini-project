@@ -30,5 +30,15 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <li>Shipping Info: ${product.shippingInfo}</li>
             <li>Minimum Order Quantity: ${product.minOrderQty}</li>
         `;
+
+        //Tags
+        let tagsDiv = document.getElementById("tags");
+        tagsDiv.innerHTML = "";
+        (product.tags || []).forEach((tag) => {
+            let span = document.createElement("span");
+            span.className = "tag";
+            span.innerText = tag;
+            tagsDiv.appendChild(span);
+        });
     })
     .catch((err) => console.log(err));
