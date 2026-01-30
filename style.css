@@ -27,3 +27,17 @@ body {
   border: 1px solid #ccc;
   max-width: 169px;
 }
+
+#suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#historyContainer {
+  margin: 20px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+}
