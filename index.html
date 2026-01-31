@@ -15,13 +15,19 @@
         <button id="searchBtn">Search</button>
         <a href="./history.html">View Search History</a>
         <a href="./viewHistory.html">View History</a>
-        <a href="./pagination.html">View Pages</a>
         <div id="suggestions"></div>
     </nav>
-    <div class="box">
+    <div class="pagination-container">
+        <div id="productList" class="box"></div>
+        
+        <div class="pagination-controls">
+            <button id="prevBtn" class="pagination-btn">Previous</button>
+            <span id="pageInfo" class="page-info"></span>
+            <button id="nextBtn" class="pagination-btn">Next</button>
+        </div>
     </div>
     
-    <script src="script.js" defer></script>
+    <script src="pagination.js" defer></script>
 </body>
 
 </html>
