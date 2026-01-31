@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Store</title>
+    <title>Products - Pagination</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <nav>
         <h1>Product Store</h1>
@@ -15,13 +13,20 @@
         <button id="searchBtn">Search</button>
         <a href="./history.html">View Search History</a>
         <a href="./viewHistory.html">View History</a>
-        <a href="./pagination.html">View Pages</a>
+        <a href="./index.html">Home</a>
         <div id="suggestions"></div>
     </nav>
-    <div class="box">
-    </div>
-    
-    <script src="script.js" defer></script>
-</body>
 
+    <div class="pagination-container">
+        <div id="productList" class="box"></div>
+        
+        <div class="pagination-controls">
+            <button id="prevBtn" class="pagination-btn">Previous</button>
+            <span id="pageInfo" class="page-info"></span>
+            <button id="nextBtn" class="pagination-btn">Next</button>
+        </div>
+    </div>
+
+    <script src="pagination.js" defer></script>
+</body>
 </html>
